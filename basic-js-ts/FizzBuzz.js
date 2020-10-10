@@ -5,7 +5,7 @@ function fizzBuzz(num) {
     ? console.log("Fizz")
     : num % 5 === 0
     ? console.log("Buzz")
-    : null;
+    : console.log(num);
 }
 fizzBuzz(21);
 fizzBuzz(18);
