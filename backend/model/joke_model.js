@@ -22,4 +22,4 @@ const jokeSchema = mongoose.Schema(
   }
 );
 
-module.exports = User = mongoose.model("joke", jokeSchema);
+module.exports = Joke = mongoose.model("joke", jokeSchema);
