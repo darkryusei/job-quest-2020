@@ -5,6 +5,9 @@ const jokeSchema = mongoose.Schema(
     id: {
       type: mongoose.Schema.ObjectId,
     },
+    user_id: {
+      type: String,
+    },
     joke: {
       type: String,
     },

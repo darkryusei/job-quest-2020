@@ -1,12 +1,11 @@
 const express = require("express");
 const app = express();
-const config = require("./util/config");
+const config = require("./config/config");
 const api = require("./route/route");
-const mongoose = require("./util/database");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(function (req, res, next) {
+app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
     "Access-Control-Allow-Headers",

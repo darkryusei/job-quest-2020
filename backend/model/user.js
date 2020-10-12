@@ -5,7 +5,7 @@ const userSchema = mongoose.Schema(
     id: {
       type: mongoose.Schema.ObjectId,
     },
-    user: {
+    user_id: {
       type: String,
     },
     password: {
