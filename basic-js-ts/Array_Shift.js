@@ -1,25 +1,10 @@
 function shift(arr, direction, num) {
-  direction === "left" ? shiftArrayLeft() : shiftArrayRight();
+  return direction === "left"
+    ? console.log(arr.concat(arr.splice(0, num)))
+    : direction === "right"
+    ? console.log(arr.splice(arr.length - num).concat(arr))
+    : console.log(arr);
 }
-const shiftArrayLeft = () => {
-  result_arr = [];
-  for (let i = num; i < arr.length; i++) {
-    result_arr.push(arr[i]);
-  }
-  for (let i = 0; i < num; i++) {
-    result_arr.push(arr[i]);
-  }
-  console.log(result_arr);
-};
-const shiftArrayRight = () => {
-  result_arr = [];
-  for (let i = num - 1; i < arr.length; i++) {
-    result_arr.push(arr[i]);
-  }
-  for (let i = 0; i < num - 1; i++) {
-    result_arr.push(arr[i]);
-  }
-  console.log(result_arr);
-};
-shift(["john", "jane", "sarah", "alex", "james"], "left", 2);
-shift([1, 2, 3, 4, 5], "right", 3);
+shift(["john", "jane", "sarah", "alex", "james", "jean"], "left", 2);
+shift([1, 2, 3, 4, 5, 6, 7], "right", 3);
+shift([1, 2, 3, 4, 5]);
