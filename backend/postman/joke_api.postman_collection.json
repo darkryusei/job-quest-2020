@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "d8d340f4-a841-423a-acfd-4fe18d8608ae",
+		"name": "joke_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all joke",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get joke by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/5f84bd7d77ed0e09c0f6177a",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"5f84bd7d77ed0e09c0f6177a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "like joke by id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/5f84bd5e77ed0e09c0f61779/like",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"5f84bd5e77ed0e09c0f61779",
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dislike joke by id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/5f84bd5e77ed0e09c0f61779/dislike",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"5f84bd5e77ed0e09c0f61779",
+						"dislike"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete joke by id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjVmODRiZDE1NzdlZDBlMDljMGY2MTc3OCIsInVzZXJfaWQiOiJ0ZXN0NCIsInBhc3N3b3JkIjoiJDJiJDA1JGpuVGQxQ0pHMHFvT3JMLmxYVWR6T09tbTY2VUJjZnNYWWEuc2NKUHh3YkxCUlVTSFhXS08uIiwiX192IjowfSwiaWF0IjoxNjAyNTM0Njk5LCJleHAiOjE2MDI1MzgyOTl9.pmlE8XDqO_WdDeCjYlMfllHXeFMmYVERZSnA7fIAnHs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:4000/5f84bd7d77ed0e09c0f6177a",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"5f84bd7d77ed0e09c0f6177a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add new joke",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjVmODRiZDE1NzdlZDBlMDljMGY2MTc3OCIsInVzZXJfaWQiOiJ0ZXN0NCIsInBhc3N3b3JkIjoiJDJiJDA1JGpuVGQxQ0pHMHFvT3JMLmxYVWR6T09tbTY2VUJjZnNYWWEuc2NKUHh3YkxCUlVTSFhXS08uIiwiX192IjowfSwiaWF0IjoxNjAyNTM0Njk5LCJleHAiOjE2MDI1MzgyOTl9.pmlE8XDqO_WdDeCjYlMfllHXeFMmYVERZSnA7fIAnHs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"joke\": \"hahhahhahahaha2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": \"test4\",\n    \"password\": \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "regis",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6ImJyYWQiLCJlbWFpbCI6ImJyYWRAZ21haWwuY29tIn0sImlhdCI6MTYwMjQ1MTA1NSwiZXhwIjoxNjAyNDU0NjU1fQ.pbbDBuyiYCa-zfX1YDrYQkfPLRbcKKTGoQdBayyg32U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": \"test4\",\n    \"password\": \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/regis",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"regis"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
